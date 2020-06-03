@@ -1,0 +1,343 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.node.ready",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "kubernetes.node.ready",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.namespace.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.deployment.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.label.status.phase",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "cpu.shares.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceRequests.cpuCores",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceLimits.cpuCores",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "memory.limit.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceRequests.memBytes",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceLimits.memBytes",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "cpu.shares.used.percent",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "kubernetes.pod.resourceRequests.cpuCores",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "kubernetes.pod.resourceLimits.cpuCores",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "memory.limit.used.percent",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "kubernetes.pod.resourceRequests.memBytes",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": null,
+          "target": "kubernetes.pod.resourceLimits.memBytes",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Pod Capacity Summary",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "stack": true,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "container.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Container Count by Pod",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "kubernetes.pod.status.ready",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "No. of Pods",
+      "type": "singlestat"
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Kubernetes State"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Kubernetes Pod State",
+  "uid": "1s8oM0WWz"
+}

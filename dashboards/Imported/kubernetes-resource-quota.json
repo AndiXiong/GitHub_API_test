@@ -1,0 +1,802 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.cpu.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.cpu.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Requests CPU",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.limits.cpu.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.limits.cpu.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Limits CPU",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 6
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.memory.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.memory.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Requests Memory",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 6
+      },
+      "id": 3,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.limits.memory.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.limits.memory.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Limits Memory",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.storage.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.requests.storage.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Requests Storage",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.configmaps.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.configmaps.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Config Maps",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.persistentvolumeclaims.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.persistentvolumeclaims.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Persistent Volume Claim",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 19
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.pods.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.pods.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Pods",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 25
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.replicationcontrollers.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.replicationcontrollers.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Replication Controllers",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 25
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.resourcequotas.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.resourcequotas.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Resource Quotas",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 32
+      },
+      "id": 10,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.secrets.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.secrets.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Secrets",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 32
+      },
+      "id": 11,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Services",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 38
+      },
+      "id": 12,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.loadbalancers.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.loadbalancers.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Services Loadbalancers",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 38
+      },
+      "id": 13,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.nodeports.hard",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "kubernetes.resourcequota.services.nodeports.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Services Nodeports",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Kubernetes State"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Kubernetes Resource Quota",
+  "uid": "u5lTG0WZk"
+}
