@@ -15,8 +15,19 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 100,
-  "links": [],
+  "id": 87,
+  "iteration": 1590980697451,
+  "links": [
+    {
+      "asDropdown": true,
+      "icon": "external link",
+      "tags": [
+        "CI-Pipeline"
+      ],
+      "title": "Dashboards",
+      "type": "dashboards"
+    }
+  ],
   "panels": [
     {
       "datasource": null,
@@ -30,7 +41,7 @@
         "flowcharts": [
           {
             "allowDrawio": false,
-            "bgColor": "#d0e2ff",
+            "bgColor": null,
             "center": true,
             "csv": "",
             "download": false,
@@ -44,23 +55,96 @@
             "tooltip": true,
             "type": "xml",
             "url": "http://<YourUrl>/<Your XML/drawio file/api>",
-            "xml": "<mxfile host=\"www.draw.io\" modified=\"2020-05-29T18:50:26.734Z\" agent=\"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36\" etag=\"rajNAzhsONOUTuVdnT46\" version=\"13.1.8\"><diagram id=\"Lr8ACVxGKYyv_QT-qPq2\" name=\"Page-1\">5VbLcqMwEPwajqlCyPhxDHYee/BlvVV7VkAGVYSGFSK28/U7QiIGY5eTKu9ecrGlntFo1N0gAros90+aVcUaMi6DKMz2AV0FUUSmhOKfRQ4OiecLB+RaZD7pCGzEO/dg6NFGZLweJBoAaUQ1BFNQiqdmgDGtYTdM24Ic7lqxnI+ATcrkGP0tMlM4dB7NjvgzF3nR7Uym/nwvLH3NNTTK7xdENAt5tN26cMm6Wv6gdcEy2PUg+hDQpQYwblTul1xabjva3LrHC9GPvjVX5jMLaOxWvDHZ8K7ltjFz6Mhoj8PtgjCgya4Qhm8qltroDuVHrDClxBnB4VZIuQQJGucKFCYltdHwyk/AcaO+9zeuDd/3IN/4E4eSG33AFB+9I51dvMto6Oe7o2YL6rGip9fEH5J5m+QftY9U4cCzdYE5eoa5qcQdkgoHuWkP6YAt4CGtWx0FCP9pwCVgz2GYpn1ouLbpgGcuqw7E5prTRMTcPiO418+JtMi0GerHpMgVjlPUhWOzidVD4JNx7wOlyDK7PNG8Fu/spS1ljVGBUKYlNE6CeGVrNQZq92yT20g+my2GipOx4pNzgoc3EHzynwVfQdqUyBUzAtR3V346j68qT8J/Jf38ovTXlF4sLitdV0wNVOkSbdE7x989JiB1+3GVH8kaY+uV/f3JK0CxVI7jX3hR9izgNrlimKvmOPsOP/Ou/7yJzt0jw5vmJldESE5sMx/ZJorJ2Dbk67bB6fHibmO9ryP68Bc=</diagram></mxfile>",
+            "xml": "<mxfile host=\"www.draw.io\" modified=\"2020-05-25T18:16:20.302Z\" agent=\"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36\" etag=\"GHlMCdMrYVZnlQz4VrUO\" version=\"13.1.3\" pages=\"2\"><diagram id=\"z7JqfigNPnFKC_BKAIqM\" name=\"Page-1\">5ZZLb6MwEIB/DcdKAYckvYY8utq+tDns2YUJuLUZaoaS7K9fG0wB0ZV2L6tI4WDZ3/iB5zMPj0XqtNe8yB4wAekFs+TksY0XBMvVwpQWnFsQrm5bkGqRtMjvwUH8AgdnjlYigXLUkRAliWIMY8xziGnEuNZYj7sdUY5XLXgKE3CIuZzSnyKhrKWrYNnzOxBp1q3sL9z+FO86u52UGU+wHiC29VikEamtqVME0uauy0s7bveH6OeNacjpbwawp211v49A5y/B++P65eHVpxs3yweXldvwc9WM+gHvFZTkbp3OXT40VnkCdsqZx9Z1JggOBY9ttDYHwLCMlDQt31RL0vgGEUrUzWg2ay4TOQopB3zXXJZjTjuuhLTH5Q7kB5CIuQt8NdE0C92WQBOcBshlZQ+ogPTZdHHRWyfInVC/a9e9bz90LBu4njvG3RFLP2fuLZiKE/EPUoKJlAiVElReg40gvDQdbKJjA0fzrintYnliynWVXoWbuX9pbuYTN99yglRzEpg3ZoRMrsJNuLw0N+HEzfeVfWY2UEg8K7tV+8lacGUT3paGPON1CFuy/yfMNPsfjSY2+Ftj298=</diagram><diagram id=\"S0e0MMrDajogn-ErVyPQ\" name=\"Page-2\">ldFPD4IgFADwT8OxTWWWXbPSS4dmq3UkQWGhjyFN69NnQzPWpS7s8ePxHn8Qjqsu0UTxHVAmUeDRDuE1CoJFNO/HF9wthNHSQqkFteRPkIkHG9Ab9CYoa5xEAyCNUC7mUNcsN44RraF10wqQbldFSvYFWU7kt54ENdxqFHqTp0yUfOzse8NKRcbkARpOKLQfhDcIxxrA2KjqYiZfbze+y14dD/p6V1z6q3OwLC5pMpvZYtt/tryvoFltfi3dB9PR+onzv3jzBA==</diagram></mxfile>",
             "zoom": "100%"
           }
         ]
       },
       "format": "short",
-      "graphId": "flowchart_2",
+      "graphId": "flowchart_88",
       "gridPos": {
-        "h": 3,
-        "w": 24,
+        "h": 2,
+        "w": 19,
         "x": 0,
         "y": 0
       },
-      "id": 2,
+      "id": 88,
       "newFlag": false,
       "rulesData": {
         "rulesData": [
+          {
+            "aggregation": "current",
+            "alias": "Links",
+            "colors": [
+              "rgba(245, 54, 54, 0.9)",
+              "rgba(237, 129, 40, 0.89)",
+              "rgba(50, 172, 45, 0.97)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 2,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": false,
+            "hidden": false,
+            "invert": false,
+            "linkData": [
+              {
+                "hidden": false,
+                "linkOn": "a",
+                "linkParams": false,
+                "linkUrl": "https://grafana.com/docs/grafana/latest/administration/provisioning/",
+                "pattern": "3OEuLGCernb2qNBbMj1t-1"
+              },
+              {
+                "hidden": false,
+                "linkOn": "a",
+                "linkParams": false,
+                "linkUrl": "https://grafana.com/docs/grafana/latest/administration/provisioning/",
+                "pattern": "3OEuLGCernb2qNBbMj1t-2"
+              }
+            ],
+            "linkProp": "id",
+            "linkRegEx": false,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 1,
+            "overlayIcon": false,
+            "pattern": ".*",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              50,
+              80
+            ],
+            "tooltip": false,
+            "tooltipColors": false,
+            "tooltipLabel": "",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": false,
+            "tpGraphHigh": null,
+            "tpGraphLow": null,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "short",
+            "valueData": []
+          },
           {
             "aggregation": "current",
             "alias": "myRule",
@@ -83,9 +167,9 @@
             "linkRegEx": true,
             "mappingType": 1,
             "metricType": "serie",
-            "order": 1,
+            "order": 2,
             "overlayIcon": false,
-            "pattern": ".*",
+            "pattern": "/.*/",
             "rangeData": [],
             "reduce": true,
             "refId": "A",
@@ -129,23 +213,144 @@
       "version": "0.8.1"
     },
     {
-      "datasource": null,
+      "aliasColors": {
+        "Canceled": "#F2CC0C",
+        "Errored": "#585858",
+        "Failed": "#E02F44",
+        "Passed": "#56A64B",
+        "Started": "#F2CC0C",
+        "Total": "#5794F2"
+      },
+      "bars": true,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "displayBarsSideBySide": true,
       "fieldConfig": {
         "defaults": {
           "custom": {}
         },
         "overrides": []
       },
+      "fill": 1,
       "gridPos": {
-        "h": 7,
-        "w": 24,
+        "h": 11,
+        "w": 10,
         "x": 0,
-        "y": 6
+        "y": 2
       },
-      "id": 123123,
-      "type": "mdm-guide"
+      "id": 76,
+      "interval": "1d",
+      "labelAlign": "center",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null as zero",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "count(increase(travis_build_pull_request_number{repository=~\"$project\", event_type=\"pull_request\", event_state!=\"created\", event_state!=\"started\"}[24h]))",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Total",
+          "refId": "A"
+        },
+        {
+          "expr": "count(increase(travis_build_pull_request_number{repository=~\"$project\", event_type=\"pull_request\", event_state=\"passed\"}[24h]))",
+          "format": "time_series",
+          "hide": false,
+          "intervalFactor": 1,
+          "legendFormat": "Passed",
+          "refId": "B"
+        },
+        {
+          "expr": "count(increase(travis_build_pull_request_number{repository=~\"$project\", event_type=\"pull_request\", event_state=\"failed\"}[24h]))",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Failed",
+          "refId": "C"
+        },
+        {
+          "expr": "count(increase(travis_build_pull_request_number{repository=~\"$project\", event_type=\"pull_request\", event_state=\"errored\"}[24h]))",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Errored",
+          "refId": "D"
+        },
+        {
+          "expr": "count(increase(travis_build_pull_request_number{repository=~\"$project\", event_type=\"pull_request\", event_state=\"canceled\"}[24h]))",
+          "format": "time_series",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Canceled",
+          "refId": "E"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "7d",
+      "timeShift": null,
+      "title": "Number of Pull Requests for $project",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "corpglory-multibar-graph-panel",
+      "xaxis": {
+        "buckets": null,
+        "customDateFormat": "%d/%m/%y",
+        "customDateFormatShow": true,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ]
     },
     {
+      "columns": [],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -153,60 +358,780 @@
         },
         "overrides": []
       },
-      "folderId": 0,
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 11,
+        "w": 5,
+        "x": 10,
+        "y": 2
+      },
+      "hideTimeOverride": true,
+      "id": 82,
+      "interval": "1d",
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 0,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Date",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD",
+          "pattern": "Time",
+          "type": "date"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 0,
+          "pattern": "/.*/",
+          "preserveFormat": false,
+          "sanitize": false,
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
+        }
+      ],
+      "targets": [
+        {
+          "expr": "count(avg_over_time(pr_report_changed_lines{project=~\"$project\", created_at!=\"\"}[24h]))",
+          "format": "time_series",
+          "hide": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Number of PRs",
+          "refId": "B"
+        },
+        {
+          "expr": "avg(avg_over_time(pr_report_changed_lines{project=~\"$project\", created_at!=\"\"}[24h]))",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "Avg PR Size (Lns)",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": "7d",
+      "timeShift": null,
+      "title": "Average Pull Request Size",
+      "transform": "timeseries_to_columns",
+      "type": "table-old"
+    },
+    {
+      "columns": [],
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fontSize": "100%",
       "gridPos": {
         "h": 15,
-        "w": 12,
+        "w": 9,
+        "x": 15,
+        "y": 2
+      },
+      "id": 10,
+      "interval": "",
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 5,
+        "desc": false
+      },
+      "styles": [
+        {
+          "alias": "Last Updated",
+          "align": "auto",
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "link": false,
+          "pattern": "Time",
+          "type": "hidden"
+        },
+        {
+          "alias": "Build #",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": 2,
+          "link": false,
+          "linkTargetBlank": true,
+          "linkTooltip": "Build ${__cell} Metrics Dashboard",
+          "linkUrl": "http://banish1.fyre.ibm.com:3000/d/lfFeHAzZk/pull-request-metrics?orgId=1&var-project=$project&var-build_number=${__cell}&var-pr_number=${__cell_9}",
+          "pattern": "build_number",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "PR Status",
+          "align": "auto",
+          "colorMode": "value",
+          "colors": [
+            "#56A64B",
+            "#E02F44",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "mappingType": 1,
+          "pattern": "event_state",
+          "rangeMaps": [],
+          "sanitize": false,
+          "thresholds": [
+            "passed",
+            " failed"
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "PASSED",
+              "value": "passed"
+            },
+            {
+              "text": "FAILED",
+              "value": "failed"
+            },
+            {
+              "text": "ERRORED",
+              "value": "errored"
+            },
+            {
+              "text": "",
+              "value": "started"
+            },
+            {
+              "text": "CANCELED",
+              "value": "canceled"
+            },
+            {
+              "text": "",
+              "value": "created"
+            }
+          ]
+        },
+        {
+          "alias": "Event Type",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "event_type",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "instance",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "PR #",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 0,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "See Travis PR Logs",
+          "linkUrl": "https://travis.ibm.com/EA/$project/builds/${__cell_1}",
+          "mappingType": 1,
+          "pattern": "Value",
+          "thresholds": [
+            "canceled"
+          ],
+          "type": "hidden",
+          "unit": "none"
+        },
+        {
+          "alias": "Project Name",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkTargetBlank": true,
+          "linkTooltip": "Pull Request Metrics",
+          "linkUrl": "http://banish1.fyre.ibm.com:3000/d/PDKnVtzZz/pull-request-dashboard?tab=advanced&orgId=1&var-project=${__cell}&var-node=All&var-namespace=default",
+          "mappingType": 1,
+          "pattern": "repository",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "linkTargetBlank": true,
+          "linkUrl": "https://travis.ibm.com/EA/$project/builds/${__cell}",
+          "mappingType": 1,
+          "pattern": "build_id",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "PR Size (Lines)",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": false,
+          "mappingType": 1,
+          "pattern": "changed_lines",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "Nill",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "alias": "PR#",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "PR #",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "link": true,
+          "linkTargetBlank": true,
+          "linkTooltip": "PR ${__cell} Metrics Dashboard",
+          "linkUrl": "http://banish1.fyre.ibm.com:3000/d/lfFeHAzZk/pull-request-metrics?orgId=1&var-project=$project&var-pr_number=${__cell}&var-build_number=${__cell_2}",
+          "mappingType": 1,
+          "pattern": "pullrequest_number",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 2,
+          "pattern": "Value",
+          "rangeMaps": [],
+          "thresholds": [],
+          "type": "number",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "alias": "Build Started at",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "started_at",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "text": "CANCELED BUILD",
+              "value": "None"
+            }
+          ]
+        }
+      ],
+      "targets": [
+        {
+          "expr": "sum (travis_build_number{repository=\"$project\",event_type=\"pull_request\",event_state!=\"started\",event_state!=\"created\"}) by (build_number,event_state,build_id,pullrequest_number,started_at)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "expr": "sum (travis_build_pull_request_number{repository=\"$project\",event_type=\"pull_request\",changed_lines!=\"unavailable\"}) by (build_number,event_state,build_id,changed_lines)",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "refId": "B"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Pull Request Status",
+      "transform": "table",
+      "type": "table-old"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "#19730E",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "s",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
         "x": 0,
         "y": 13
       },
-      "headings": true,
-      "id": 3,
-      "limit": 30,
+      "id": 13,
+      "interval": null,
       "links": [],
-      "query": "",
-      "recent": true,
-      "search": false,
-      "starred": true,
-      "tags": [],
-      "title": "Dashboards",
-      "type": "dashlist"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(9, 133, 22, 0.18)",
+        "full": false,
+        "lineColor": "#56A64B",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "avg(avg_over_time(travis_build_duration{repository=~\"$project\", event_type=\"pull_request\", event_state=\"passed\"}[24h]))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Passed PR Build Time",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "None",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
     },
     {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "#AD0317",
+        "#d44a3a"
+      ],
       "datasource": null,
+      "decimals": 2,
       "fieldConfig": {
         "defaults": {
           "custom": {}
         },
         "overrides": []
       },
+      "format": "s",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
       "gridPos": {
-        "h": 15,
-        "w": 12,
-        "x": 12,
+        "h": 4,
+        "w": 5,
+        "x": 5,
         "y": 13
       },
-      "id": 4,
+      "id": 14,
+      "interval": null,
       "links": [],
-      "options": {
-        "feedUrl": "https://grafana.com/blog/news.xml"
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(204, 44, 62, 0.24)",
+        "full": false,
+        "lineColor": "#E02F44",
+        "show": true
       },
-      "title": "Latest from the blog",
-      "type": "news"
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "avg(avg_over_time(travis_build_duration{repository=~\"$project\", event_type=\"pull_request\", event_state=\"failed\"}[24h]))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Failed PR Build Time",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "None",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgb(0, 0, 0)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "decimals": 2,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "format": "s",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 10,
+        "y": 13
+      },
+      "id": 8,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(0, 0, 0, 0.16)",
+        "full": false,
+        "lineColor": "rgb(0, 0, 0)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "avg(avg_over_time(travis_build_duration{repository=~\"$project\", event_type=\"pull_request\", event_state=\"errored\"}[24h]))",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Errored PR Build Time",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "None",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
     }
   ],
+  "refresh": false,
   "schemaVersion": 25,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "CI-Pipeline"
+  ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "tags": [],
+          "text": "mdmx-ui-config",
+          "value": "mdmx-ui-config"
+        },
+        "datasource": "Prometheus",
+        "definition": "label_values(travis_build_number,repository)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Microservice",
+        "multi": false,
+        "name": "project",
+        "options": [],
+        "query": "label_values(travis_build_number,repository)",
+        "refresh": 1,
+        "regex": "mdmx.*",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
-    "hidden": true,
     "refresh_intervals": [
       "10s",
       "30s",
@@ -228,11 +1153,10 @@
       "2d",
       "7d",
       "30d"
-    ],
-    "type": "timepicker"
+    ]
   },
-  "timezone": "browser",
-  "title": "Home",
-  "uid": "YolcSczGk",
-  "version": 18
+  "timezone": "utc",
+  "title": "Pull Requests",
+  "uid": "exKMDvzMz",
+  "version": 7
 }
