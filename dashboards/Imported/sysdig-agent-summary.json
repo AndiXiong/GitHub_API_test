@@ -1,0 +1,469 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "host.hostName",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "host.mac",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "agent.version",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "metricCount.jmx",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "metricCount.appCheck",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "metricCount.statsd",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "metricCount.prometheus",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "concat",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "host.hostName",
+            "host.mac"
+          ],
+          "sortDirection": null,
+          "target": "agent.version",
+          "timeAggregation": "concat"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "host.hostName",
+            "host.mac"
+          ],
+          "sortDirection": null,
+          "target": "metricCount.jmx",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "host.hostName",
+            "host.mac"
+          ],
+          "sortDirection": null,
+          "target": "metricCount.appCheck",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "host.hostName",
+            "host.mac"
+          ],
+          "sortDirection": null,
+          "target": "metricCount.statsd",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": [
+            "host.hostName",
+            "host.mac"
+          ],
+          "sortDirection": null,
+          "target": "metricCount.prometheus",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Agent Versions and Metric Limits",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 9
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "count",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "host.mac",
+          "timeAggregation": "distinct"
+        }
+      ],
+      "title": "Agent count",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 9
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "container.count",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Container count",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 9
+      },
+      "id": 3,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "host.hostName"
+          ],
+          "sortDirection": null,
+          "target": "container.count",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Container count by host",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 14
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "dragent.analyzer.n_evts",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "max",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "dragent.analyzer.n_drops",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "max",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "dragent.analyzer.n_drops_buffer",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "System Calls Processed/Dropped",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 14
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "dragent.analyzer.sr",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Agent Sampling Ratio",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 14
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "dragent.analyzer.fl.ms",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Agent Flush Time (ms)",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Hosts & Containers"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Sysdig Agent Summary",
+  "uid": "UV_oG0ZZk"
+}

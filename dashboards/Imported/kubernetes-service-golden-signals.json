@@ -1,0 +1,798 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Response Time per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Request Rate per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Error Rate (4xx/5xx) per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 4
+      },
+      "id": 3,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Slowest Endpoints",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 4
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Most Requested Endpoints",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 4
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url"
+          ],
+          "sortDirection": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Endpoints with most error rates",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.deployment.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.request.time",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.request.count",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.error.count",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.statusCode",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "concat",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.statusCode",
+          "timeAggregation": "concat"
+        }
+      ],
+      "title": "My Services",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 17
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "cpu.used.percent",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "CPU Used per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 17
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "memory.used.percent",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Memory Used per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 12,
+        "y": 17
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "fs.used.percent",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Storage Used per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 18,
+        "y": 17
+      },
+      "id": 10,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.total",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Network I/O per Service",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 22
+      },
+      "id": 11,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 100,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Response Time Distribution for Services",
+      "type": "graph",
+      "xaxis": {
+        "buckets": 10,
+        "mode": "histogram"
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 22
+      },
+      "id": 12,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 100,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Request Rate Distribution for Services",
+      "type": "graph",
+      "xaxis": {
+        "buckets": 10,
+        "mode": "histogram"
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 22
+      },
+      "id": 13,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 100,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Error Rate Distribution for Services",
+      "type": "graph",
+      "xaxis": {
+        "buckets": 10,
+        "mode": "histogram"
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Services"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Kubernetes Service Golden Signals",
+  "uid": "tHloM0ZWk"
+}
