@@ -1,0 +1,145 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "proc.commandLine",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "cpu.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "memory.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.bytes.total",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.request.count.in",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "proc.commandLine"
+          ],
+          "sortDirection": null,
+          "target": "cpu.used.percent",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "proc.commandLine"
+          ],
+          "sortDirection": null,
+          "target": "memory.used.percent",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "proc.commandLine"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.total",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "proc.commandLine"
+          ],
+          "sortDirection": null,
+          "target": "net.request.count.in",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Top Processes",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Hosts & Containers"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Top Processes",
+  "uid": "RG_oMAWWz"
+}
