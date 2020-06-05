@@ -1,0 +1,215 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "net.http.url",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.method",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.request.count",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.request.time",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.request.time.worst",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.bytes.in",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.bytes.out",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.bytes.total",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "net.http.error.count",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.request.count",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.request.time",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time.worst",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.in",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.out",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.total",
+          "timeAggregation": "timeAvg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "6",
+          "segmentBy": [
+            "net.http.url",
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "sum"
+        }
+      ],
+      "title": "HTTP Top Requests",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Applications"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "HTTP Top Requests",
+  "uid": "vm8TMAWWk"
+}
