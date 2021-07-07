@@ -1,0 +1,1115 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "iteration": 1558721906740,
+  "links": [],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "Sysdig",
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 8,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.status.ready",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": "",
+      "title": "No. of Pods",
+      "type": "singlestat",
+      "valueFontSize": "150%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 7,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "container.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Container Count by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.restart.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Pod Restarts by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 7
+      },
+      "id": 0,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.desired",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Pods Desired by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 6,
+        "y": 7
+      },
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.available",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Pods Available by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 12,
+        "y": 7
+      },
+      "id": 1,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.unavailable",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Pods Unavailable by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Sysdig",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 7
+      },
+      "id": 3,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "paceLength": 10,
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "filter": "kubernetes.deployment.name = $deployment",
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.paused",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Pods Paused by Deployment",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "columns": [],
+      "datasource": "Sysdig",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "alias": "Namespace",
+          "decimals": 2,
+          "pattern": "kubernetes.namespace.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Deployment Name",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.name",
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Running",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.replicas.running",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Updated",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.replicas.updated",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Available",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.replicas.available",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Desired",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.replicas.desired",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Unavailable",
+          "decimals": -2,
+          "pattern": "kubernetes.deployment.replicas.unavailable",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "alias": "Replicas Paused",
+          "decimals": 0,
+          "pattern": "kubernetes.deployment.replicas.paused",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "filter": "",
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.running",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.updated",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.available",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.desired",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.unavailable",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.deployment.replicas.paused",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Deployment Status Summary",
+      "transform": "table",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "columns": [],
+      "datasource": "Sysdig",
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 1,
+        "desc": true
+      },
+      "styles": [
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.namespace.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.deployment.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.name",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.label.status.phase",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "cpu.shares.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceRequests.cpuCores",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceLimits.cpuCores",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "memory.limit.used.percent",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceRequests.memBytes",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "decimals": 2,
+          "pattern": "kubernetes.pod.resourceLimits.memBytes",
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "pattern": "/.*/",
+          "type": "string"
+        }
+      ],
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "cpu.shares.used.percent",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.resourceRequests.cpuCores",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.resourceLimits.cpuCores",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "memory.limit.used.percent",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.resourceRequests.memBytes",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": true,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": [
+            "kubernetes.namespace.name",
+            "kubernetes.deployment.name",
+            "kubernetes.pod.name",
+            "kubernetes.pod.label.status.phase"
+          ],
+          "sortDirection": "desc",
+          "target": "kubernetes.pod.resourceLimits.memBytes",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Pod Capacity Summary",
+      "transform": "timeseries_aggregations",
+      "type": "table",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 18,
+  "style": "dark",
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Kubernetes State"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "hello-world-deployment",
+          "value": [
+            "hello-world-deployment"
+          ]
+        },
+        "datasource": "Sysdig",
+        "definition": "label_values(kubernetes.deployment.name)",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "deployment",
+        "options": [],
+        "query": "label_values(kubernetes.deployment.name)",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Kubernetes Deployment State",
+  "uid": "yK8TMAWZz"
+}

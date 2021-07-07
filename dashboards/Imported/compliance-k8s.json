@@ -1,0 +1,1014 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "compliance.k8s-bench.pass_pct",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Overall Pass %",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.pass_pct",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Overall Pass % Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": 0,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 6
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.1.api-server.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "max",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.2.scheduler.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.3.controller-manager.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.4.configure-files.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.5.etcd.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.6.general-security-primitives.pass_pct",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "6",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.1.kubelet.pass_pct",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "7",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.2.configuration-files.pass_pct",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Pass % By Section",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 6
+      },
+      "id": 3,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.1.api-server.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.2.scheduler.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.3.controller-manager.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "3",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.4.configure-files.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "4",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.5.etcd.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "5",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.6.general-security-primitives.pass_pct",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "6",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.1.kubelet.pass_pct",
+          "timeAggregation": "max"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "7",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.2.configuration-files.pass_pct",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Pass % By Section Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "100",
+          "min": 0,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 12
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.1.api-server.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.1.api-server.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.1.api-server.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.1 - API Server)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (Overall)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 19
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.3.controller-manager.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.3.controller-manager.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.3.controller-manager.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.3 - Controller Manager)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 19
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.2.scheduler.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.2.scheduler.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.2.scheduler.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.2 - Scheduler)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 25
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.5.etcd.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.5.etcd.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.5.etcd.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.5 - Etcd)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 25
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.4.configure-files.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.4.configure-files.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.4.configure-files.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.4 - Configure Files)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 32
+      },
+      "id": 10,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.6.general-security-primitives.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.6.general-security-primitives.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.1.6.general-security-primitives.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (1.6 - General Security Primitives)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 32
+      },
+      "id": 11,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.1.kubelet.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.1.kubelet.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.1.kubelet.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (2.1 - Kubelet)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 38
+      },
+      "id": 12,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.2.configuration-files.tests_pass",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.2.configuration-files.tests_warn",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "2",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "compliance.k8s-bench.2.2.configuration-files.tests_fail",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Test Details (2.2 - Configuration Files)",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Compliance"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Compliance (K8s)",
+  "uid": "UvloM0WWk"
+}
