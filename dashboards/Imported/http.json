@@ -1,0 +1,419 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Request Count",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 1,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "net.http.error.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "HTTP Error Count",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Average Request Time",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 3,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "net.http.request.time.worst",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Max Request Time",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 3
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Number of Requests Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "net.http.request.time",
+          "timeAggregation": "avg"
+        },
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "1",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "net.http.request.time.worst",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Average and Max Request Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Top URLs by Number of Requests",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.url"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.time.worst",
+          "timeAggregation": "max"
+        }
+      ],
+      "title": "Slowest URLs",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.statusCode"
+          ],
+          "sortDirection": null,
+          "target": "net.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Status Codes Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "net.http.method"
+          ],
+          "sortDirection": null,
+          "target": "net.http.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Request Types Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Applications"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "HTTP",
+  "uid": "lLwTGAZZz"
+}
