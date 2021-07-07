@@ -1,0 +1,472 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.bytes.total",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Total Memory",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 1,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.bytes.used",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Resident Memory",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 0
+      },
+      "id": 2,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.used.percent",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Memory Usage",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 0
+      },
+      "id": 3,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.swap.bytes.used",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Swap Memory",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 0
+      },
+      "id": 4,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.pageFault.major",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Page Faults",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "format": "short",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 5,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "refId": "0",
+          "segmentBy": null,
+          "target": "memory.pageFault.minor",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Avg. Minor Page Faults",
+      "type": "singlestat"
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 3
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "memory.bytes.used",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Memory Usage Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": null,
+          "sortDirection": null,
+          "target": "memory.pageFault.major",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Page Faults Over Time",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "proc.name"
+          ],
+          "sortDirection": null,
+          "target": "memory.bytes.used",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Memory Usage - Top Processes",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "proc.name"
+          ],
+          "sortDirection": null,
+          "target": "memory.pageFault.major",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Page Faults - Top Processes",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 10,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "host.hostName"
+          ],
+          "sortDirection": null,
+          "target": "memory.bytes.used",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Memory Usage - Top Hosts",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "id": 11,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "host.hostName"
+          ],
+          "sortDirection": null,
+          "target": "memory.pageFault.major",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Page Faults - Top Hosts",
+      "type": "graph",
+      "xaxis": {
+        "mode": "series",
+        "values": [
+          "total"
+        ]
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Hosts & Containers"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Memory",
+  "uid": "bTwTMAWZk"
+}

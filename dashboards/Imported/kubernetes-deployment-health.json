@@ -1,0 +1,590 @@
+{
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 0,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.request.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Request Count by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 1,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.request.time",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Response Time by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 14
+      },
+      "id": 2,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.in",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Network Bytes In by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 9
+      },
+      "id": 3,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "cpu.used.percent",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "CPU % by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "fill": 7,
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 9
+      },
+      "id": 4,
+      "legend": {
+        "show": false
+      },
+      "stack": true,
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "memory.bytes.used",
+          "timeAggregation": "avg"
+        }
+      ],
+      "title": "Memory Used by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 9
+      },
+      "id": 5,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "fs.used.percent",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "File System % by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 14
+      },
+      "id": 6,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "file.time.total",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "File I/O by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 7,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.error.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Net Error Count by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 14
+      },
+      "id": 8,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "avg",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "net.bytes.out",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Network Bytes Out by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "bars": true,
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 4
+      },
+      "id": 9,
+      "legend": {
+        "show": false
+      },
+      "lines": false,
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": true,
+          "isTabularFormat": false,
+          "pageLimit": 100,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "container.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Container Distribution by Deployment",
+      "type": "graph",
+      "xaxis": {
+        "buckets": 10,
+        "mode": "histogram"
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 4
+      },
+      "id": 10,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "container.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Container Count by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    },
+    {
+      "datasource": "Sysdig",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 4
+      },
+      "id": 11,
+      "legend": {
+        "show": false
+      },
+      "targets": [
+        {
+          "groupAggregation": "sum",
+          "isSingleDataPoint": false,
+          "isTabularFormat": false,
+          "pageLimit": 10,
+          "refId": "0",
+          "segmentBy": [
+            "kubernetes.deployment.name"
+          ],
+          "sortDirection": null,
+          "target": "kubernetes.pod.restart.count",
+          "timeAggregation": "timeAvg"
+        }
+      ],
+      "title": "Pod Restarts by Deployment",
+      "type": "graph",
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 6,
+  "tags": [
+    "Sysdig",
+    "Default dashboard",
+    "Resource Usage"
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timezone": "browser",
+  "title": "Kubernetes Deployment Health",
+  "uid": "tzwTM0WWz"
+}
